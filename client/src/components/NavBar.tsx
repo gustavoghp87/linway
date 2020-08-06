@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {Navbar, Form, FormControl, Nav, Button, NavDropdown} from 'react-bootstrap';
 //import RightMenu from './Sections/RightMenu';
 //import { useSelector } from "react-redux";
@@ -6,7 +6,7 @@ import {Navbar, Form, FormControl, Nav, Button, NavDropdown} from 'react-bootstr
 
 function NavBar(props:any) {
 
-  console.log(props)
+  //console.log(props)
 
   // const [visible, setVisible] = useState(false)
 
@@ -34,8 +34,20 @@ function NavBar(props:any) {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/otro">&nbsp; &nbsp;Opción 1&nbsp; &nbsp;</Nav.Link>
-            <Nav.Link href="#pricing">&nbsp; &nbsp;Opción 2&nbsp; &nbsp;</Nav.Link>
+          
+            <Nav.Link href="/otro">&nbsp; &nbsp;Notas de envío&nbsp; &nbsp;</Nav.Link>
+            <Nav.Link href="/facturar">&nbsp; &nbsp;Facturar&nbsp; &nbsp;</Nav.Link>
+            <Nav.Link href="#pricing">&nbsp; &nbsp;Repartos&nbsp; &nbsp;</Nav.Link>
+            <Nav.Link href="#pricing">&nbsp; &nbsp;Pedidos&nbsp; &nbsp;</Nav.Link>
+
+            <NavDropdown title="&nbsp; &nbsp;Agregar&nbsp; &nbsp;" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Clientes</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Productos</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Repartos</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+            </NavDropdown>
+
             <NavDropdown title="&nbsp; &nbsp;Editar&nbsp; &nbsp;" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Clientes</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Productos</NavDropdown.Item>
@@ -44,6 +56,7 @@ function NavBar(props:any) {
               <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+
           <Nav>
             <Form inline>
               <FormControl type="text" placeholder="Buscar..." className="mr-sm-2" />

@@ -1,6 +1,4 @@
 import React from 'react';
-import {Button} from 'react-bootstrap';
-import Axios from 'axios';
 
 
 function LandingPage() {
@@ -13,19 +11,12 @@ function LandingPage() {
         }
     } catch(e) {}
 
-    const facturaNueva = () => {
-        console.log("click")
-        Axios.post('http://localhost:5000/api/product/factura-nueva', {data:{dato:"ok"}})
-            .then( resp => {console.log("All right", resp)} )
-    };
     
     return (
 
         <div style={presentation} id="presentation">
 
             <h2 style={{textAlign:'center'}}> All right! </h2>
-
-            <Button variant="primary" onClick={()=>facturaNueva()}>AFIPi</Button>{' '}
 
         </div>
     );
