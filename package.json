@@ -1,0 +1,37 @@
+{
+  "name": "linway",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "backend": "nodemon server/index.js",
+    "frontend": "npm run front --prefix client",
+    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
+  },
+  "dependencies": {
+    "@afipsdk/afip.js": "^0.6.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "html-pdf": "^2.2.0",
+    "http-proxy-middleware": "^1.0.5",
+    "mongoose": "^5.9.27",
+    "morgan": "^1.10.0",
+    "npm-audit-resolver": "^2.2.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavoghp87/linway.git"
+  },
+  "author": "ghp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavoghp87/linway/issues"
+  },
+  "homepage": "https://github.com/gustavoghp87/linway#readme"
+}
