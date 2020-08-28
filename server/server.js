@@ -7,7 +7,7 @@ const cookieParser = require("cookie-parser");
 const config = require("./config/key");
 const configJson = require("./config/config.json");
 const morgan = require('morgan');
-
+require('dotenv').config();
 
 const mongoose = require("mongoose");
 const connect = mongoose.connect(config.mongoURI, {
