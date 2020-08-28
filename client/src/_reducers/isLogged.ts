@@ -1,4 +1,5 @@
-const loggedReducer = (state = false, action) => {
+
+const loggedReducer = (state:boolean = false, action:any) => {
     switch(action.type) {
         case 'SIGN_IN':
             return !state;

@@ -3,7 +3,7 @@ import {Button} from 'react-bootstrap';
 import Axios from 'axios';
 import {useSelector, useDispatch} from 'react-redux';
 import {increment, decrement, log} from '../_actions';
-
+import { RootState } from '../_reducers/index';
 
 function LandingPage() {
 
@@ -18,11 +18,11 @@ function LandingPage() {
     const facturaNueva = () => {
         console.log("click")
         Axios.post('http://localhost:5000/api/product/factura-nueva', {data:{dato:"ok"}})
-            .then( resp => {console.log("All right", resp)} )
+            .then( resp => {console.log("All right", resp)} );
     };
 
-    const counter = useSelector(state => state.counter);
-    const isLogged = useSelector(state => state.isLogged);
+    const counter = useSelector((state:RootState) => state.counter);
+    const isLogged = useSelector((state:RootState) => state.isLogged);
     const dispatch = useDispatch();
     
     return (
@@ -44,7 +44,7 @@ function LandingPage() {
 
         </div>
     );
-}
+};
 
 
 export default LandingPage
