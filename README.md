@@ -1,4 +1,4 @@
-#MERN-TS APP
+# MERN-TS APP
 
 Base para aplicación en react+typescript+nodejs+mongoose, ya montado redux thunk
 
