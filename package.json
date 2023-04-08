@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.22"
   },
   "repository": {
     "type": "git",
